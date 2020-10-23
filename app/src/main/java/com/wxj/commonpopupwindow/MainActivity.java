@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onDismiss() {
                         Toast.makeText(MainActivity.this, "onDismiss", Toast.LENGTH_SHORT).show();
+
                     }
                 }).create();
 
@@ -74,11 +75,25 @@ public class MainActivity extends AppCompatActivity {
                 .setOnCreateView(new CommonPopupWindow.onViewCallBack() {
                     @Override
                     public void setView(View view) {
-
+                        view.findViewById(R.id.tv_one).setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Toast.makeText(MainActivity.this, "tv_one", Toast.LENGTH_SHORT).show();
+                                dropDownPopupWindow.dismiss();
+                            }
+                        });
+                        view.findViewById(R.id.tv_two).setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Toast.makeText(MainActivity.this, "tv_two", Toast.LENGTH_SHORT).show();
+                                dropDownPopupWindow.dismiss();
+                            }
+                        });
                     }
                 }).setOnDismissListener(new CommonPopupWindow.OnDismissListener() {
                     @Override
                     public void onDismiss() {
+                        Toast.makeText(MainActivity.this, "onDismiss", Toast.LENGTH_SHORT).show();
 
                     }
                 }).create();

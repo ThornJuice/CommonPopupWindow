@@ -65,7 +65,7 @@ public final class CommonPopupWindow {
         }
         mPopupWindow.setOnDismissListener(() -> {
 
-            if (mWindow != null) {
+            if (mEnableBackGroundAlpha) {
                 setBackgroundAlpha(1f);
             }
 
@@ -332,5 +332,14 @@ public final class CommonPopupWindow {
             }
         }
         return this;
+    }
+
+    /**
+     * dismiss
+     */
+    public void dismiss() {
+        if (mPopupWindow != null) {
+            mPopupWindow.dismiss();
+        }
     }
 }
