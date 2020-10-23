@@ -1,0 +1,24 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="popwindow_bottom_anim">
+        <item name="android:windowEnterAnimation">@anim/pop_bottom_anim_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_bottom_anim_out</item>
+    </style>
+
+    <style name="fade_in_and_out">
+        <item name="android:windowEnterAnimation">@anim/scale_fade_in</item>
+        <item name="android:windowExitAnimation">@anim/scale_fade_out</item>
+    </style>
+
+    <style name="popwindow_drop_down_anim">
+        <item name="android:windowEnterAnimation">@anim/pop_drop_down_anim_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_drop_down_anim_out</item>
+    </style>
+</resources>
